@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 有一字符串"67，89.120! 95，2。32? 16.",使用符串分离，打印出每个数 字，然后 找出数字中的最大值与最小值。
+        function testSplit() {
+            var s = "67，89.120! 95，2。32? 16.";
+            var reg = /[ ，\.! 。?]+/;
+            var arr = s.split(reg);
+            console.log(arr);
+            var max = arr[0],
+                min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (max < parseInt(arr[i])) {
+                    max = arr[i];
+                }
+                if (min > parseInt(arr[i])) {
+                    min = arr[i];
+                }
+            }
+            console.log("最大值为：" + max + "最小值为：" + min);
+        }
+        testSplit();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

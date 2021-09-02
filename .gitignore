@@ -1,0 +1,20 @@
+# 只忽略当前目录下index.css，而不忽略sub/index.css
+/index.css
+
+# 忽略所有的test目录，不管该目录在那个目录级别下
+test/
+
+#忽略所有的.a文件，不管该目录在哪个目录级别下
+*.a
+
+#排除lib.a 这个文件，即：这个文件不忽略
+!lib.a
+
+# 忽略 reg目录里的所有css，js， 但不忽略 reg/sub/*.css和*.js
+/reg/*.css
+/reg/*.js
+
+# 忽略所有的doc目录及其子目录下的.pdf文件
+doc/**/*.pdf
+
+
